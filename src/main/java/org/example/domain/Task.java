@@ -1,7 +1,6 @@
 package org.example.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import javax.validation.constraints.Min;
@@ -22,7 +21,6 @@ public class Task {
     private String description;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy HH:mm:ss")
-    @JsonProperty(value = "last_modification_date")
     private LocalDateTime lastModificationDate;
 
     public Task(String name, String description) {
